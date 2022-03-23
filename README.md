@@ -1,4 +1,5 @@
-# Study guide that maps the Exam AZ-500: Microsoft Azure Security Technologies - Skills Measured PDF
+# Study Guide for Exam AZ-500: Microsoft Azure Security Technologies
+
 
 ## Manage identity and access (30-35%)
 
@@ -12,131 +13,152 @@
 | [xxx](http) | manage external identities by using Azure AD |
 | [xxx](http) | manage administrative units |
 
-### Manage secure access by using Azure AD
-
+### Manage Azure Active Directory identities
 | Term | Description |
 |---|---|
-| [xxx](http) | configure Azure AD Privileged Identity Management (PIM) |
-| [xxx](http) | implement Conditional Access policies, including multifactor authentication |
-| [xxx](http) | implement Azure AD Identity Protection |
-| [xxx](http) | implement passwordless authentication |
-| [xxx](http) | configure access reviews |
+| [Azure Active Directory (AD)](http) | xxx |
+| [Built-in Azure AD roles](http) | xxx |
+| [Azure AD users](http) | xxx |
+| [Group and membership](http) | xxx |
+| [Administrative Units in Azure AD](http) | xxx |
+| [Authentication options decision tree](http) | xxx |
+| [Password hash synchronization](http) | xxx |
+| [Enable password hash synchronization](http) | xxx |
+| [Pass-through authentication](http) | xxx |
+| [Azure AD Pass-through Authentication](http) | xxx |
+| [Passwordless](http) | xxx |
+| [Passwordless Phone](http) | xxx |
+| [Passwordless Security Key](http) | xxx |
+| [Passwordless Launch Blog](http) | xxx |
+| [Microsoft Identity Platform ](http) | xxx |
+| [Azure AD pricing ](http) | xxx |
 
-### Manage application access
+### Configure secure access by using Azure AD
 
-| Term | Description |
-|---|---|
-| [xxx](http) | integrate single sign-on (SSO) and identity providers for authentication |
-| [xxx](http) | create an app registration |
-| [xxx](http) | configure app registration permission scopes |
-| [xxx](http) | manage app registration permission consent |
-| [xxx](http) | manage API permissions to Azure subscriptions and resources |
-| [xxx](http) | configure an authentication method for a service principal |
+| [Privileged Identity Management (PIM) ](http) | xxx |
+| [Assign Azure AD roles in PIM ](http) | xxx |
+| [Getting started in PIM](http) | xxx |
+| [PIM configuration settings ](http) | xxx |
+| [Building a Conditional Access policy ](http) | xxx |
+| [Activate and configure PIM—demo ](http) | xxx |
+| [Azure Multi-Factor Authentication ](http) | xxx |
+| [Access reviews in Azure AD ](http) | xxx |
+| [Access review in PIM ](http) | xxx |
 
 ### Manage access control
 
-| Term | Description |
-|---|---|
-| [xxx](http) | configure Azure role permissions for management groups, subscriptions, resource groups, and resources |
-| [xxx](http) | interpret role and resource permissions |
-| [xxx](http) | assign built-in Azure AD roles |
-| [xxx](http) | create and assign custom roles, including Azure roles and Azure AD roles |
+| [Role-based access control (RBAC)](http) | xxx |
+| [RBAC scope](http) | xxx |
+| [Built-in Azure RBAC roles](http) | xxx |
+| [Create or update Azure custom roles ](http) | xxx |
+| [Configure custom RBAC roles—demo ](http) | xxx |
+| [Resource locks ](http) | xxx |
+
+### Manage application access
+
+| [App registration](http) | xxx |
+| [Azure AD consent framework](http) | xxx |
+| [Managed identities in Azure](http) | xxx |
 
 ## Implement platform protection (15-20%)
 
 ### Implement advanced network security
 
-| Term | Description |
-|---|---|
-| [xxx](http) | secure the connectivity of hybrid networks |
-| [xxx](http) | secure the connectivity of virtual networks |
-| [xxx](http) | create and configure Azure Firewall |
-| [xxx](http) | create and configure Azure Firewall Manager |
-| [xxx](http) | create and configure Azure Application Gateway |
-| [xxx](http) | create and configure Azure Front Door |
-| [xxx](http) | create and configure Web Application Firewall (WAF) |
-| [xxx](http) | configure a resource firewall, including storage account, Azure SQL, Azure Key Vault, or Azure App Service |
-| [xxx](http) | configure network isolation for Web Apps and Azure Functions |
-| [xxx](http) | implement Azure Service Endpoints |
-| [xxx](http) | implement Azure Private Endpoints, including integrating with other services |
-| [xxx](http) | implement Azure Private Links |
-| [xxx](http) | implement Azure DDoS Protection |
+| [Security](http) | xxx |
+| [Network security groups (NSGs)](http) | xxx |
+| [NSG deployment scenarios](http) | xxx |
+| [Application security groups (ASGs)](http) | xxx |
+| [Configure NSGs and ASGs—demo](http) | xxx |
+| [Azure Firewall](http) | xxx |
+| [Deploy and configure Azure Firewall](http) | xxx |
+| [Azure Web Application Firewall (WAF)](http) | xxx |
+| [Azure Front Door](http) | xxx |
+| [Azure Bastion service](http) | xxx |
+| [Create an Azure Bastion host](http) | xxx |
+| [Service endpoints](http) | xxx |
+| [Distributed denial of service (DDoS) protection](http) | xxx |
 
 ### Configure advanced security for compute
 
-| Term | Description |
-|---|---|
-| [xxx](http) | configure Azure Endpoint Protection for virtual machines (VMs) |
-| [xxx](http) | Implement and manage security updates for VMs |
-| [xxx](http) | configure security for container services |
-| [xxx](http) | manage access to Azure Container Registry |
-| [xxx](http) | configure security for serverless compute |
-| [xxx](http) | configure security for an Azure App Service |
-| [xxx](http) | configure encryption at rest |
-| [xxx](http) | configure encryption in transit |
+| [Endpoint protection](http) | xxx |
+| [Implement vulnerability management](http) | xxx |
+| [Update Management](http) | xxx |
+| [Configure a TLS/SSL certificate](http) | xxx |
+| [Configure security for different containers](http) | xxx |
+| [Access and identity options for Azure Kubernetes Service (AKS)](http) | xxx |
+| [Configure security for container registry](http) | xxx |
+| [Network concepts for applications in AKS](http) | xxx |
 
 ## Manage security operations (25-30%)
 
-### Configure centralized policy management
+### Monitor security by using Azure Monitor
 
-| Term | Description |
-|---|---|
-| [xxx](http) | configure a custom security policy |
-| [xxx](http) | create a policy initiative |
-| [xxx](http) | configure security settings and auditing by using Azure Policy |
+| [Azure Monitor](http) | xxx |
+| [Alerts](http) | xxx |
+| [Create, view, and manage log alerts using Azure Monitor](http) | xxx |
+| [Configuring diagnostic logging and log retention](http) | xxx |
 
-### Configure and manage threat protection
+### Monitor security by using Azure Security Center
 
-| Term | Description |
-|---|---|
-| [xxx](http) | configure Azure Defender for Servers (not including Microsoft Defender for Endpoint) |
-| [xxx](http) | evaluate vulnerability scans from Azure Defender |
-| [xxx](http) | configure Azure Defender for SQL |
-| [xxx](http) | use the Microsoft Threat Modeling Tool |
+| [Overview of Azure Security Center](http) | xxx |
+| [Monitor security with Azure Security Center](http) | xxx |
+| [Centralized policy management](http) | xxx |
+| [Configure security settings by using Azure Policy](http) | xxx |
+| [Vulnerability scanner](http) | xxx |
+| [Enable JIT VM access](http) | xxx |
+| [Azure Security Center—demo](http) | xxx |
 
-### Configure and manage security monitoring solutions
+### Monitor security by using Azure Sentinel
 
-| Term | Description |
-|---|---|
-| [xxx](http) | create and customize alert rules by using Azure Monitor |
-| [xxx](http) | configure diagnostic logging and log retention by using Azure Monitor |
-| [xxx](http) | monitor security logs by using Azure Monitor |
-| [xxx](http) | create and customize alert rules in Azure Sentinel |
-| [xxx](http) | configure connectors in Azure Sentinel |
-| [xxx](http) | evaluate alerts and incidents in Azure Sentinel |
+| [Azure Sentinel](http) | xxx |
+| [Create and customize alerts in Azure Sentinel](http) | xxx |
+| [Connect data sources](http) | xxx |
+| [Create incidents from alerts](http) | xxx |
+| [Investigate incidents with Azure Sentinel](http) | xxx |
+| [Configure a playbook for a security event](http) | xxx |
+
+### Configure security policies
+
+| [Azure Policy](http) | xxx |
+| [Create and manage policies to enforce compliance](http) | xxx |
+| [Create a custom policy definition](http) | xxx |
+| [Deploy an Azure Policy—demo](http) | xxx |
+| [Azure Blueprint](http) | xxx |
+| [Create and assign blueprints](http) | xxx |
 
 ## Secure data and applications (25–30%)
 
 ### Configure security for storage
 
-| Term | Description |
-|---|---|
-| [xxx](http) | configure access control for storage accounts |
-| [xxx](http) | configure storage account access keys |
-| [xxx](http) | configure Azure AD authentication for Azure Storage and Azure Files |
-| [xxx](http) | configure delegated access |
+| [Azure Storage overview](http) | xxx |
+| [Authorization options for Azure Storage](http) | xxx |
+| [Azure AD Storage Authentication](http) | xxx |
+| [Shared access signature (SAS)](http) | xxx |
+| [Create a user delegation SAS](http) | xxx |
+| [Azure AD Domain Services](http) | xxx |
+| [Azure Storage Service Encryption (SSE)](http) | xxx |
+| [Configure encryption key management](http) | xxx |
 
-### Configure security for data
+### Configure security for databases
 
-| Term | Description |
-|---|---|
-| [xxx](http) | enable database authentication by using Azure AD |
-| [xxx](http) | enable database auditing |
-| [xxx](http) | configure dynamic masking on SQL workloads |
-| [xxx](http) | implement database encryption for Azure SQL Database |
-| [xxx](http) | implement network isolation for data solutions, including Azure Synapse Analytics and Azure Cosmos DB |
+| [Enable database auditing](http) | xxx |
+| [Server-level vs. database-level auditing policy](http) | xxx |
+| [Configure Azure SQL Database Advanced Threat Protection (ATP)](http) | xxx |
+| [Advanced Data Security (ADS)](http) | xxx |
+| [Advanced Threat Protection](http) | xxx |
+| [SQL Database authentication](http) | xxx |
+| [Implement database encryption through transparent data encryption (TDE)](http) | xxx |
+| [Configure Always Encrypted by using Azure Key Vault](http) | xxx |
 
 ### Configure and manage Azure Key Vault
 
-| Term | Description |
-|---|---|
-| [xxx](http) | create and configure Key Vault |
-| [xxx](http) | configure access to Key Vault |
-| [xxx](http) | manage certificates, secrets, and keys |
-| [xxx](http) | configure key rotation |
-| [xxx](http) | configure backup and recovery of certificates, secrets, and keys |
+| [Implement and configure Key Vault](http) | xxx |
+| [Key rotation](http) | xxx |
+| [Key Vault access and permissions](http) | xxx |
+| [Management plane and access plane for Key Vault—demo](http) | xxx |
 
 
+---
 ## Supplemental Links:
 [Microsoft AZ-500 page that includes free training, skills measured PDF, and exam details](https://docs.microsoft.com/en-us/learn/certifications/exams/az-500)
 
@@ -144,9 +166,7 @@
 
 [WhizLabs AZ-500](https://www.whizlabs.com/microsoft-azure-certification-az-500)
 
-
-====
-Line Break: <br/>
-Bullet: &bull;
+---
+<br/> &bull;
 Bold: **CanNotDelete**
 Bold + Italitcs ***initiatives***
