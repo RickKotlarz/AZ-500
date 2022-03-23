@@ -35,6 +35,8 @@
 
 ### Configure secure access by using Azure AD
 
+| Term | Description |
+|---|---|
 | [Privileged Identity Management (PIM) ](http) | xxx |
 | [Assign Azure AD roles in PIM ](http) | xxx |
 | [Getting started in PIM](http) | xxx |
@@ -47,6 +49,8 @@
 
 ### Manage access control
 
+| Term | Description |
+|---|---|
 | [Role-based access control (RBAC)](http) | xxx |
 | [RBAC scope](http) | xxx |
 | [Built-in Azure RBAC roles](http) | xxx |
@@ -56,6 +60,8 @@
 
 ### Manage application access
 
+| Term | Description |
+|---|---|
 | [App registration](http) | xxx |
 | [Azure AD consent framework](http) | xxx |
 | [Managed identities in Azure](http) | xxx |
@@ -64,6 +70,8 @@
 
 ### Implement advanced network security
 
+| Term | Description |
+|---|---|
 | [Security](http) | xxx |
 | [Network security groups (NSGs)](http) | xxx |
 | [NSG deployment scenarios](http) | xxx |
@@ -80,6 +88,8 @@
 
 ### Configure advanced security for compute
 
+| Term | Description |
+|---|---|
 | [Endpoint protection](http) | xxx |
 | [Implement vulnerability management](http) | xxx |
 | [Update Management](http) | xxx |
@@ -93,6 +103,8 @@
 
 ### Monitor security by using Azure Monitor
 
+| Term | Description |
+|---|---|
 | [Azure Monitor](http) | xxx |
 | [Alerts](http) | xxx |
 | [Create, view, and manage log alerts using Azure Monitor](http) | xxx |
@@ -100,6 +112,8 @@
 
 ### Monitor security by using Azure Security Center
 
+| Term | Description |
+|---|---|
 | [Overview of Azure Security Center](http) | xxx |
 | [Monitor security with Azure Security Center](http) | xxx |
 | [Centralized policy management](http) | xxx |
@@ -110,6 +124,8 @@
 
 ### Monitor security by using Azure Sentinel
 
+| Term | Description |
+|---|---|
 | [Azure Sentinel](http) | xxx |
 | [Create and customize alerts in Azure Sentinel](http) | xxx |
 | [Connect data sources](http) | xxx |
@@ -119,6 +135,8 @@
 
 ### Configure security policies
 
+| Term | Description |
+|---|---|
 | [Azure Policy](http) | xxx |
 | [Create and manage policies to enforce compliance](http) | xxx |
 | [Create a custom policy definition](http) | xxx |
@@ -130,6 +148,8 @@
 
 ### Configure security for storage
 
+| Term | Description |
+|---|---|
 | [Azure Storage overview](http) | xxx |
 | [Authorization options for Azure Storage](http) | xxx |
 | [Azure AD Storage Authentication](http) | xxx |
@@ -141,6 +161,8 @@
 
 ### Configure security for databases
 
+| Term | Description |
+|---|---|
 | [Enable database auditing](http) | xxx |
 | [Server-level vs. database-level auditing policy](http) | xxx |
 | [Configure Azure SQL Database Advanced Threat Protection (ATP)](http) | xxx |
@@ -152,6 +174,8 @@
 
 ### Configure and manage Azure Key Vault
 
+| Term | Description |
+|---|---|
 | [Implement and configure Key Vault](http) | xxx |
 | [Key rotation](http) | xxx |
 | [Key Vault access and permissions](http) | xxx |
