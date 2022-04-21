@@ -28,7 +28,11 @@
 
 | Term | Description |
 |---|---|
-| [Privileged Identity Management (PIM) ](https://docs.microsoft.com/en-us/learn/modules/protect-against-security-threats-azure) | xxx |
+| [Privileged Identity Management (PIM) ](https://docs.microsoft.com/en-us/learn/modules/azure-ad-privileged-identity-management/) | xxx |
+
+
+[Configure Azure AD privileged identity management - Learn | Microsoft Docs]
+
 | [Assign Azure AD roles in PIM ](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user) | xxx |
 | [Getting started in PIM](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-getting-started) | xxx |
 | [PIM configuration settings ](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-how-to-change-default-settings) | xxx |
