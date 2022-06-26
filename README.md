@@ -70,9 +70,10 @@ Updated June 2022
 |[Site-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-classic-portal) | &bull; Connects your on-premises network to an Azure virtual network endpoint over an IPsec/IKE (IKEv1 or IKEv2) VPN tunnel. |
 |[Point-to-Site connection](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-classic-azure-portal) | This is a classic deployment model and is not recommended. It supports Windows VPN clients only, uses the Secure Socket Tunneling Protocol (SSTP), an SSL-based VPN protocol. |
 | [Network security groups (NSGs)](https://docs.microsoft.com/en-us/learn/modules/secure-and-isolate-with-nsg-and-service-endpoints/2-network-security-groups) |  NSGs operate at layers 3 & 4, and provide a list of allowed and denied communication to and from network interfaces and subnets. NSGs are fully customizable, and give you the ability to fully lock down network communication to and from your Azure resources (e.g. virtual machines) in an Azure virtual network. By using NSGs, you can isolate applications between environments, tiers, and services. <br/><br/>***Note: NSGs uses static IP addresses and as your network scales this may become difficult to maintain.***  <br/><br/> For each rule, you can specify source and destination, port, and protocol. <br/> <br/> Network security groups are evaluated and applied based on the five-tuple (properties): <br/> &bull; Name = Unique name within the NSG <br/> &bull; Priority = A number between 100 and 4096 used to priorities rules (lower has higher priority) <br/> &bull; Source / Destination = Any, or an individual IP address, classless inter-domain routing (CIDR) block, service tag, or ASG. <br/> &bull; Protocol  = TCP, UDP, ICMP, ESP, AH, or Any. <br/> &bull; Direction = Whether the rule applies to inbound, or outbound traffic <br/> &bull; Port range	= Single port or range of ports <br/> &bull; Action = Allow or deny <br/> <br/> Azure creates the following default rules in each NSG that is created: <br/><br/> ![https://raw.githubusercontent.com/RickKotlarz/media-files/main/media/Default-NSG-rules.png](https://raw.githubusercontent.com/RickKotlarz/media-files/main/media/Default-NSG-rules.png) |
-| [NSG deployment scenarios](https://docs.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview) | xxx |
+| [NSG deployment scenarios](https://docs.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works) |  :computer:	Read the referenced URL for additional information :computer: |
+| [Virtual network service tags](https://docs.microsoft.com/en-us/azure/virtual-network/service-tags-overview) | A service tag represents a group of IP address prefixes from a given Azure service. It helps to minimize the complexity of frequent updates on network security rules. Microsoft manages the address prefixes encompassed by the service tag and automatically updates the service tag as addresses change, minimizing the complexity of frequent updates to network security rules. <br/> <br/>  You can use service tags to define network access controls on: <br/> &bull; Network security groups <br/> &bull; Azure Firewall <br/> &bull; User-defined routes |
 | [Application security groups (ASGs)](https://docs.microsoft.com/en-us/learn/modules/secure-and-isolate-with-nsg-and-service-endpoints/2-network-security-groups) | Application Security Groups (ASG) are a feature within Azure that helps simplify the management of Network Security Group (NSG) rules. Application security groups enable you to configure network security as a natural extension of an application's structure, ***allowing you to group virtual machines and define network security policies based on those groups***. You can reuse your security policy at scale without manual maintenance of explicit IP addresses. [Application Security Groups (ASG) supplemental](https://docs.microsoft.com/en-us/azure/virtual-network/application-security-groups) |
-| [Configure NSGs and ASGs—demo](https://docs.microsoft.com/en-us/azure/virtual-network/manage-network-security-group) | xxx |
+| [Configure NSGs and ASGs - demo](https://docs.microsoft.com/en-us/azure/virtual-network/manage-network-security-group) |  :computer:	Read the referenced URL for additional information :computer: |
 | [Azure Firewall](https://docs.microsoft.com/en-us/azure/firewall/features) | Azure Firewall is a managed, cloud-based, network security service that protects your Azure Virtual Network resources. It is a fully stateful firewall as a service with built-in high availability and unrestricted cloud scalability. Azure Firewall provides inbound protection for non-HTTP/S protocols. Examples of non-HTTP/S protocols include: Remote Desktop Protocol (RDP), Secure Shell (SSH), and File Transfer Protocol (FTP). It also provides outbound, network-level protection for all ports and protocols, and application-level protection for outbound HTTP/S. [Azure Firewall Overview](https://docs.microsoft.com/en-us/azure/firewall/overview) |
 | [Deploy and configure Azure Firewall](https://docs.microsoft.com/en-us/azure/firewall/tutorial-firewall-deploy-portal) | xxx |
 | [Web Application Firewall](https://docs.microsoft.com/en-us/learn/modules/describe-basic-security-capabilities-azure/6-describe-what-web-application-firewall?WT.mc_id=esi_studyguide_content_wwl) | Web applications are increasingly targeted by malicious attacks that exploit commonly known vulnerabilities. **SQL injection and cross-site scripting are among the most common attacks**. <br/> <br/> Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities. A centralized WAF helps make security management simpler, improves the response time to a security threat, and allows patching a known vulnerability in one place, instead of securing each web application. A WAF also gives application administrators better assurance of protection against threats and intrusions. ***WAF can be deployed with Azure Application Gateway, Azure Front Door, and Azure Content Delivery Network (CDN) service from Microsoft.*** <br/> <br/> [Introduction to Azure Web Application Firewalls](https://docs.microsoft.com/en-us/azure/web-application-firewall/overview) |
@@ -82,6 +83,52 @@ Updated June 2022
 | [Service endpoints](https://docs.microsoft.com/en-us/learn/modules/secure-and-isolate-with-nsg-and-service-endpoints/4-vnet-service-endpoints) | xxx |
 | [Distributed denial of service (DDoS) protection](https://docs.microsoft.com/en-us/learn/modules/protect-against-security-threats-azure/) | DDoS Protection leverages the scale and elasticity of Microsoft’s global network to bring DDoS mitigation capacity to every Azure region. The Azure DDoS Protection service protects your Azure applications by scrubbing traffic at the Azure network edge before it can impact your service's availability. Within a few minutes of attack detection, you are notified using Azure Monitor metrics.<br/><br/> Comes in two versions: <br/> Azure DDoS Protection Basic (*Free*)<br/> Azure DDoS Protection Standard (*provides SLAs for Application and Cost Protection*) <br/><br/> Every property in Azure is protected by Azure's infrastructure DDoS (Basic) Protection at no additional cost and requires no user configuration or application changes. <br/> ![](https://docs.microsoft.com/en-us/azure/ddos-protection/media/ddos-protection-overview/ddos-comparison.png) <br/> <br/> DDoS Protection Standard can mitigate the following types of attacks: <br/>**Volumetric attacks**: These attacks flood the network layer with a substantial amount of seemingly legitimate traffic. They include UDP floods, amplification floods, and other spoofed-packet floods. DDoS Protection Standard mitigates these potential multi-gigabyte attacks by absorbing and scrubbing them, with Azure's global network scale, automatically.<br/> **Protocol attacks**: These attacks render a target inaccessible, by exploiting a weakness in the layer 3 and layer 4 protocol stack. They include SYN flood attacks, reflection attacks, and other protocol attacks. DDoS Protection Standard mitigates these attacks, differentiating between malicious and legitimate traffic, by interacting with the client, and blocking malicious traffic. <br/> **Resource (application) layer attacks**: These attacks target web application packets, to disrupt the transmission of data between hosts. They include HTTP protocol violations, SQL injection, cross-site scripting, and other layer 7 attacks. Use a Web Application Firewall, such as the Azure  |[Application Gateway web application firewall](https://docs.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview?toc=/azure/virtual-network/toc.json), as well as DDoS Protection Standard to provide defense against these attacks. There are also third-party web application firewall offerings available in the  [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?page=1&search=web%20application%20firewall). |
 
+## PowerShell for managing network security groups
+```
+### Create a network security group
+New-AzNetworkSecurityGroup -Name "nsg1" -ResourceGroupName "rg1"  -Location  "westus"
+
+### View all network security groups
+Get-AzNetworkSecurityGroup -Name nsg1 -ResourceGroupName "rg1"
+
+### Change a network security group
+Get-AzNetworkSecurityGroup -Name "Nsg1" -ResourceGroupName "Rg1" | Add-AzNetworkSecurityRuleConfig -Name "Rdp-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority 100 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "*" -DestinationPortRange "3389" | Set-AzNetworkSecurityGroup
+
+### Delete a network security group
+Remove-AzNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
+
+### Create a security rule - Allow RDP
+$rule1 = New-AzNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" `
+    -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix `
+    Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
+
+### Create a security rule - Allow HTTP
+$rule2 = New-AzNetworkSecurityRuleConfig -Name web-rule -Description "Allow HTTP" `
+    -Access Allow -Protocol Tcp -Direction Inbound -Priority 101 -SourceAddressPrefix `
+    Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 80
+
+### View all security rules - Retrieving a network security rule config
+Get-AzNetworkSecurityGroup -Name nsg1 -ResourceGroupName rg1 
+    | Get-AzNetworkSecurityRuleConfig -Name AllowInternetOutBound -DefaultRules
+	
+### View all security rules - Retrieving a network security rule config using only the name
+Get-AzNetworkSecurityGroup -Name nsg1 -ResourceGroupName rg1 
+    | Get-AzNetworkSecurityRuleConfig -Name "rdp-rule"
+	
+### Change a security rule - Example 1
+Set-AzNetworkSecurityRuleConfig -Access Allow -DestinationAddressPrefix * -DestinationPortRange 3389 -Direction Inbound -Name 'rdp-rule' -NetworkSecurityGroup <PSNetworkSecurityGroup> -Priority 1 -Protocol Tcp -SourceAddressPrefix 'Internet' -SourcePortRange *
+
+### Delete a security rule
+$rule1 = New-AzNetworkSecurityRuleConfig -Name "rdp-rule" -Description "Allow RDP" -Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority 100 -SourceAddressPrefix "Internet" -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
+$nsg = New-AzNetworkSecurityGroup -ResourceGroupName "TestRG" -Location "westus" -Name "NSG-FrontEnd" -SecurityRules $rule1
+
+### Remove-AzNetworkSecurityRuleConfig -Name "rdp-rule" -NetworkSecurityGroup $nsg
+$nsg | Set-AzNetworkSecurityGroup
+
+### Delete an application security group
+Remove-AzApplicationSecurityGroup -Name "MyApplicationSecurityGrouo" -ResourceGroupName "MyResourceGroup"
+```
+<hr/>
 ### Configure advanced security for compute
 
 | Term | Description |
