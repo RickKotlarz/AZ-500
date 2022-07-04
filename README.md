@@ -188,9 +188,31 @@ Remove-AzApplicationSecurityGroup -Name "MyApplicationSecurityGrouo" -ResourceGr
 | [Azure Policy](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/6-control-audit-resources-azure-policy) *and describe its use cases* | Azure Policy is a service in Azure that enables you to create, assign, and manage **policies that control or audit your resources**. These policies enforce different rules across all of your resource configurations so that those configurations stay compliant with corporate standards. <br/><br/> Common use cases for Azure Policy include implementing governance for resource consistency, regulatory compliance, security, cost, and management. Policy definitions for these common use cases are already available in your Azure environment as built-ins to help you get started. <br/><br/> Azure Policy enables you to define both individual policies and groups of related policies, known as ***initiatives***. Azure Policy evaluates your resources and highlights resources that aren't compliant with the policies you've created. Azure Policy can also prevent noncompliant resources from being created. <br/><br/>[Azure Policy Overview](https://docs.microsoft.com/en-us/azure/governance/policy/overview) |
 | [Create and manage policies to enforce compliance](https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage) | xxx |
 | [Create a custom policy definition](https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-custom-policy-definition) | xxx |
-| [Deploy an Azure Policy—demo](https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage) | xxx |
-| [Azure Blueprint](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/) | xxx |
+| [Deploy an Azure Policy - demo](https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage) | xxx |
+| [Azure Blueprint](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/) | Azure Blueprints enable quick creation of governed subscriptions by enabling cloud architects to define a repeatable set of Azure resources that implements and adheres to an organization's standards, best practices, and requirements. Azure Blueprints makes it possible for development teams to rapidly build and start up new environments with trust they're building within organizational compliance with a set of built-in components, such as networking, to speed up development and delivery. <br/><br/> Blueprints are a declarative way to orchestrate the deployment of various resource templates and other artifacts such as: Role Assignments, Policy Assignments, Azure Resource Manager templates (ARM templates), and Resource Groups. |
 | [Create and assign blueprints](https://docs.microsoft.com/en-us/azure/governance/blueprints/create-blueprint-portal) | xxx |
+
+## How Blueprints are different from ARM templates
+
+The service is designed to help with environment setup. This setup often consists of a set of resource groups, policies, role assignments, and ARM template deployments. A blueprint is a package to bring each of these artifact types together and allow you to compose and version that package, including through a continuous integration and continuous delivery (CI/CD) pipeline. Ultimately, each is assigned to a subscription in a single operation that can be audited and tracked.
+<br/><br/>
+Nearly everything that you want to include for deployment in Azure Blueprints can be accomplished with an ARM template. However, an ARM template is a document that doesn't exist natively in Azure - each is stored either locally or in source control or in Templates (preview). The template gets used for deployments of one or more Azure resources, but once those resources deploy there's no active connection or relationship to the template.
+<br/><br/>
+With Azure Blueprints, the relationship between the blueprint definition (what should be deployed) and the blueprint assignment (what was deployed) is preserved. This connection supports improved tracking and auditing of deployments. Azure Blueprints can also upgrade several subscriptions at once that are governed by the same blueprint.
+<br/><br/>
+There's no need to choose between an ARM template and a blueprint. Each blueprint can consist of zero or more ARM template artifacts. This support means that previous efforts to develop and maintain a library of ARM templates are reusable in Azure Blueprints.
+
+## How Blueprints are different from Azure Policy
+
+A blueprint is a package or container for composing focus-specific sets of standards, patterns, and requirements related to the implementation of Azure cloud services, security, and design that can be reused to maintain consistency and compliance.
+<br/><br/>
+A [policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview) is a default allow and explicit deny system focused on resource properties during deployment and for already existing resources. It supports cloud governance by validating that resources within a subscription adhere to requirements and standards.
+<br/><br/>
+Including a policy in a blueprint enables the creation of the right pattern or design during assignment of the blueprint. The policy inclusion makes sure that only approved or expected changes can be made to the environment to protect ongoing compliance to the intent of the blueprint.
+<br/><br/>
+A policy can be included as one of many artifacts in a blueprint definition. Blueprints also support using parameters with policies and initiatives.
+
+
 
 ## Secure data and applications (25–30%)
 
