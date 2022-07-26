@@ -1,7 +1,7 @@
 
 
 # Study Guide for Exam AZ-500: Microsoft Azure Security Technologies
-Updated June 2022
+Updated June 2022 - Note that sections denoted with xxx are incomplete.
 
 ## Manage identity and access (30-35%)
 ### Manage Azure Active Directory identities
