@@ -281,6 +281,10 @@ Azure Key Vault is a centralized cloud service for storing your application secr
 
 [WhizLabs AZ-500](https://www.whizlabs.com/microsoft-azure-certification-az-500)
 
+[Microsoft Learning -  Microsoft Certified Trainer (MCT) lab for AZ-500](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies)
+
+[Microsoft Learning - Microsoft Certified Trainer (MCT) labs for all exams](https://github.com/MicrosoftLearning/)
+
 ---
 <br/> &bull;
 <br/> 4 spaces = &emsp; test
